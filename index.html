@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="signupForm" class="container" onsubmit="handleSubmit(event)">
+        <h2>Sign Up Here!</h2>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)">
+
+        <label for="username">Preferred Username:</label>
+        <input type="text" id="username" name="username" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="100" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)">
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)">
+            <option value="N/A">N/A</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Prefer Not To Mention">Prefer not to mention</option>
+        </select>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)">
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)"></textarea>
+
+        <label for="interests">Interests:</label>
+        <textarea id="interests" name="interests" onblur="applyRedBorder(this)" onfocus="applyGreenBorder(this)"></textarea>
+
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <div id="userData"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
